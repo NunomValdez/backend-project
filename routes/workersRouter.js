@@ -1,11 +1,24 @@
 const express = require("express");
-const { allWorkers } = require("./../controllers/workersController.js");
+const { allWorkers,
+     createWorker,
+     getWorker,
+     modifyWorker,
+    deleteWorker
+     } = require("./../controllers/workersController.js");
 const router = express.Router();
 
 
 router
     .route("/")
-    .get(allWorkers);
+    .get(allWorkers)
+    .post(createWorker);
+
+router
+    .route("/:_id")
+//  .get(getWorker)
+    .patch(modifyWorker)
+//  .delete(deleteWorker)
+
 
 
     module.exports = router; 
