@@ -56,3 +56,10 @@ exports.modifyWorker = async (req, res) => {
         res.status(404).send({ error: 'This person was not found' });
     }
 };
+
+exports.getWorker = async (req,res) => {
+    const workerId = req.params._id;
+    console.log(workerId);
+    const worker = await Worker.findById(workerId);
+    res.send({data: worker});
+}

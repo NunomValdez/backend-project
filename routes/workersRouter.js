@@ -5,6 +5,7 @@ const { allWorkers,
      modifyWorker,
     deleteWorker
      } = require("./../controllers/workersController.js");
+
 const router = express.Router();
 
 
@@ -15,7 +16,7 @@ router
 
 router
     .route("/:_id")
-//  .get(getWorker)
+    .get(getWorker)
     .patch(modifyWorker)
 //  .delete(deleteWorker)
 
