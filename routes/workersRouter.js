@@ -12,13 +12,13 @@ const router = express.Router();
 router
     .route("/")
     .get(allWorkers)
-    .post(createWorker);
-
+    .post(createWorker); 
+    // na route raiz, opera a funcao dentro de ().
 router
     .route("/:_id")
     .get(getWorker)
     .patch(modifyWorker)
-//  .delete(deleteWorker)
+    .delete(deleteWorker);
 
 
 
