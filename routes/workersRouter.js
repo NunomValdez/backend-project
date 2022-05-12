@@ -7,7 +7,7 @@ const { allWorkers,
      } = require("./../controllers/workersController.js");
 
 const router = express.Router();
-
+ 
 
 router
     .route("/")
