@@ -31,19 +31,6 @@ exports.createWorker = async (req, res) => {
     }
 };
 
-// exports.createWorker = async (req, res) => {
-
-//     const newWorker = await new Worker(req.body);
-//     // newWorker._id = Worker.length + 1;
-//     const worker = await newWorker.save();
-//     console.log(worker);
-
-//     res.json({
-//         'status': 'success',
-//         'data': worker
-//     })
-// };
-
 exports.getWorker = async (req,res) => {
     const workerId = req.params._id;
     console.log(workerId);
