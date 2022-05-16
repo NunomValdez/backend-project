@@ -13,22 +13,41 @@ exports.allWorkers = async (req, res) => {
 };
 
 exports.createWorker = async (req, res) => {
-    try{
-        console.log('entrámos na funcao create');
-        const newWorker = await new Worker(req.body);
-        console.log(newWorker);
-        newWorker._id = new mongodb.ObjectId();
-        const worker = await newWorker.save();
-        console.log(worker);
+    // if(!req.body){
+    //     res.send({'status':404});
+    // }else{
+        try{
+            const worker = await Worker.create({
+                name : req.body.name,
+                particularity :  req.body.particularity,
+                shows : req.body.shows,
+                date_of_admission : req.body.date_of_admission,
+                birthday : req.body.birthday
+            });
+            res.status(201).json(worker);
+            // worker._id = mongoose.Types.ObjectId;
+            // // worker._id instanceof mongoose.Types.ObjectId;
+        }
+        catch (err) { console.log(err)};
+    // }
+    
+    // try{
+    //     console.log('entrámos na funcao create');
+    //     const newWorker = await new Worker(req.body);
+    //     console.log(newWorker);
+    //     newWorker._id = new mongodb.ObjectId();
+    //     const worker = await newWorker.save();
+    //     console.log(worker);
 
-        res.send({
-            'status': 'success',
-            'data': worker  
-        }); 
-    } catch(err){
-        console.log(err.message);
-        res.status(404).send({ error: 'This person cannot be created' });
-    }
+    //     res.send({
+    //         'status': 'success',
+    //         'data': worker  
+    //     }); 
+    // } catch(err){
+    //     console.log(err.message);
+    //     res.status(404).send({ error: 'This person cannot be created' });
+    // }
+
 };
 
 exports.getWorker = async (req,res) => {
@@ -38,7 +57,7 @@ exports.getWorker = async (req,res) => {
     res.send({data: worker});
 };
 
-exports.modifyWorker = async (req, res) => {
+exports.updateWorker = async (req, res) => {
     try{
         const workerId = req.params._id;
         console.log(workerId);

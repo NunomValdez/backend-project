@@ -2,7 +2,7 @@ const express = require("express");
 const { allWorkers,
      createWorker,
      getWorker,
-     modifyWorker,
+     updateWorker,
     deleteWorker
      } = require("./../controllers/workersController.js");
 
@@ -17,7 +17,7 @@ router
 router
     .route("/:_id")
     .get(getWorker)
-    .patch(modifyWorker)
+    .patch(updateWorker)
     .delete(deleteWorker);
 
 

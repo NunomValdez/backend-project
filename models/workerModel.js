@@ -15,11 +15,11 @@ mongoose.connect("mongodb://localhost:27017/circus_database").then(() =>{
 // Every String can be casted in ObjectId now
 
 const Schema = mongoose.Schema({
-  _id: mongoose.Types.ObjectId,  
+  // _id: mongoose.Types.ObjectId,  
   name: String, 
   particularity : String,
   shows: Array,
-  date_of_submission : Number,
+  date_of_admission : Number,
   birthday : Number,
 });
 
@@ -32,4 +32,4 @@ const Schema = mongoose.Schema({
  
 const Worker = mongoose.model("worker", Schema);
 
-module.exports = Worker;
+module.exports = Worker; 
