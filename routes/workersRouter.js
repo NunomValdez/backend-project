@@ -13,7 +13,7 @@ router
     .route("/")
     .get(allWorkers)
     .post(createWorker); 
-    // na route raiz, opera a funcao dentro de ().
+    // na route raiz, q neste caso está definido no index.js q é a /workers, opera a funcao dentro de ().
 router
     .route("/:_id")
     .get(getWorker)

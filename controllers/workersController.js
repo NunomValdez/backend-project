@@ -1,6 +1,5 @@
 const Worker = require("./../models/workerModel.js");
 const mongoose = require("mongoose");
-const mongodb = require("mongodb");
 
 exports.allWorkers = async (req, res) => {
     // console.log(req.params);
