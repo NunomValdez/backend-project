@@ -16,10 +16,20 @@ mongoose.connect("mongodb://localhost:27017/circus_database").then(() =>{
 
 const Schema = mongoose.Schema({
   // _id: mongoose.Types.ObjectId,  
-  name: String, 
+  name: {
+    type:String,
+    required: true
+    }, 
   particularity : String,
-  shows: Array,
-  date_of_admission : Number,
+  shows: {
+    type: Array,
+  required: true
+  },
+  date_of_admission : {
+    type: Date,
+    immutable: true,
+    default: ()=> Date.now()
+  },
   birthday : Number,
 });
 

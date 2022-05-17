@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost:27017/circus_database").then(() =>{
 const Schema = mongoose.Schema({
     // _id: mongoose.Types.ObjectId,  
     city: String, 
-    coutry : String,
+    country : String,
     population_density: Number,
     age_average: Number
   });

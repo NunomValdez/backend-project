@@ -14,7 +14,7 @@ exports.allLocations = async (req, res) => {
 
 exports.createLocation = async (req, res) => {
     try{
-        const location = await new Locations.create({
+        const location = await Locations.create({
         city: req.body.city,
         country : req.body.country,
         population_density : req.body.population_density,
@@ -26,7 +26,20 @@ exports.createLocation = async (req, res) => {
         // res.status(406).send('This location was not registered');
         console.log(error);
     }
-}
+};
+
+exports.updateLocation = async (req, res) => {
+   try{
+        const locationId = req.params._id;
+        const location = Location.find(locationId);
+        Object.assign(location, req.body);
+        location.save();
+        res.send({ data: location });
+   } catch (error){
+       console.log(error.message);
+       res.status(404).send({ error: 'The Circus is not gonna act at that place' });
+   }
+};
     
 //     // try{
 //     //     console.log('entrámos na funcao create');
