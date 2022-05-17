@@ -30,16 +30,44 @@ exports.createLocation = async (req, res) => {
 
 exports.updateLocation = async (req, res) => {
    try{
-        const locationId = req.params._id;
-        const location = Location.find(locationId);
+       const locationId = req.params._id;
+        const location = await Locations.findById(locationId);
         Object.assign(location, req.body);
         location.save();
-        res.send({ data: location });
-   } catch (error){
-       console.log(error.message);
+        res.send({ data: location});
+   } 
+   catch (error){
+       console.table(error.message);
        res.status(404).send({ error: 'The Circus is not gonna act at that place' });
    }
+
 };
+
+exports.findLocation = async (req, res) => {
+    try{
+        const locationId = req.params._id;
+        const location = await Locations.findById(locationId);
+        res.send({data: location});
+    }
+    catch (err){
+        console.log(err.message);
+        res.send({data: 'Location not found at DataBase'});
+    }
+}
+
+exports.deleteLocation = async (req, res) => {
+    try{
+        const locationId = req.params._id;
+        console.log(locationId);
+        const location = await Locations.findById(locationId);
+        location.delete();
+        res.status(200).send( `Location ${location.name} was deleted from DataBase, and the Circus will not act there.` );
+    }
+    catch (err){
+        console.table(err.message);
+        res.status(404).send({ error: 'This location was not found, and for that cannot be deleted' });
+    } 
+}; 
     
 //     // try{
 //     //     console.log('entrámos na funcao create');

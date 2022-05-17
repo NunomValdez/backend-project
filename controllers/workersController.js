@@ -51,7 +51,7 @@ exports.createWorker = async (req, res) => {
 
 exports.getWorker = async (req,res) => {
     const workerId = req.params._id;
-    console.log(workerId);
+    // console.log(workerId);
     const worker = await Worker.findById(workerId);
     res.send({data: worker});
 };
@@ -59,7 +59,7 @@ exports.getWorker = async (req,res) => {
 exports.updateWorker = async (req, res) => {
     try{
         const workerId = req.params._id;
-        console.log(workerId);
+        //console.log(workerId);
         // const worker = await Worker.findById(workerId);
         const worker = await Worker.findById(workerId);
         Object.assign(worker, req.body); //vai atribuir(assign) o body vindo do request, ao objecto worker
@@ -74,8 +74,6 @@ exports.updateWorker = async (req, res) => {
 exports.deleteWorker = async ( req, res) => {
     try{ 
         const workerId = req.params._id;
-        console.log(workerId);
-        // const worker = await Worker.findById(workerId);
         const worker = await Worker.findById(workerId);
         console.log(worker);
         worker.delete(); 

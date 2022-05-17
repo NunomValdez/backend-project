@@ -1,7 +1,10 @@
 const express = require("express");
 const { 
     allLocations,
-    createLocation
+    createLocation,
+    updateLocation,
+    deleteLocation,
+    findLocation,
      } = require("../controllers/locationsController.js");
 
 const router = express.Router();
@@ -14,9 +17,9 @@ router
     // na route raiz, q neste caso está definido no index.js q é a /workers, opera a funcao dentro de ().
 router
     .route("/:_id")
-    .get()
-    .patch()
-    .delete();
+    .get(findLocation)
+    .patch(updateLocation)
+    .delete(deleteLocation);
 
 
 module.exports = router; 

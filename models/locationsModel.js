@@ -15,5 +15,6 @@ const Schema = mongoose.Schema({
   });
 
   const Locations  = mongoose.model("Locations", Schema);
+  //na collection "Location" tenho a BD populada por objectos (documents) com o desenho do Schema.
 
   module.exports = Locations;
