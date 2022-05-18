@@ -19,7 +19,7 @@ const Schema = mongoose.Schema({
   name: {
     type:String,
     required: true
-    }, 
+    },
   particularity : String,
   shows: {
     type: Array,
