@@ -4,18 +4,17 @@
 ## Circus Database 
 
 
-In this project I've made a **Rest API** in Node.js, using Express as the application framework, leveraging a NoSQL database - MongoDB - as means of storing the data.
+In this projectyou can find a **Rest API** in Node.js, using Express as the application framework, leveraging a NoSQL database - MongoDB - as means of storing the data.
 Here you can create, read, update or delete data - CRUD. These functions give you the possibility to manage the data in the DataBase, which has all the information about, in this case in particular, a Circus :circus_tent:
 
 ---
 <!-- In this REST API, information about a circus is managed, which employs several people, all of them with some particularities that make them unique and special.  -->
 
 #### Database Document example
-In this object you can see the form of a BSON document that populates the "Locations" Collection:
+In this object you can see the form of a JSON document that populates the "Locations" Collection:
 
 ```
 {
-    "_id": "627a9c2f4fc1091297fc0227",
     "name": "wonder woman",
     "particularity": "The one and only, the One with unusual Strength",
     "shows": [
@@ -29,11 +28,23 @@ In this object you can see the form of a BSON document that populates the "Locat
 }
 ```
 
+
+```
+{ 
+    city: String, 
+    country : String,
+    population_density: Number,
+    age_average: Number
+  }
+```
+
+
 ***
 
 #### Connections and commands
 
 To run the mongoDB server, you need to write the following code in your terminal:
+
 **`mongod --config /usr/local/etc/mongod.conf`**
 
 

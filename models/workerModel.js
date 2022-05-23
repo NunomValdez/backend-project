@@ -23,7 +23,7 @@ const Schema = mongoose.Schema({
   particularity : String,
   shows: {
     type: Array,
-  required: true
+    required: true
   },
   date_of_admission : {
     type: Date,
