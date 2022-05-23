@@ -34,14 +34,14 @@ In this object you can see the form of a BSON document that populates the "Locat
 #### Connections and commands
 
 To run the mongoDB server, you need to write the following code in your terminal:
-mongod --config /usr/local/etc/mongod.conf
+**`mongod --config /usr/local/etc/mongod.conf`**
 
 
 
 ##### Author Contacts:
-1. :e-mail: : nunomvmf@gmail.com
-1. You can give me some feedback :thumbsup:
-2. :moneybag: you can send me money if you want :relieved: :smirk:
+- :e-mail: : nunomvmf@gmail.com
+- You can give me some feedback :thumbsup:
+- :moneybag: you can send me money if you want :relieved: :smirk:
 
 
 
