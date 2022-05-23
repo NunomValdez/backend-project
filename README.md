@@ -10,7 +10,7 @@ Here you can create, read, update or delete data - CRUD. These functions give yo
 ---
 <!-- In this REST API, information about a circus is managed, which employs several people, all of them with some particularities that make them unique and special.  -->
 
-#### Database Document example
+### Database Document example
 In this object you can see the form of a JSON document that populates the "Locations" Collection:
 
 ```
@@ -31,11 +31,11 @@ In this object you can see the form of a JSON document that populates the "Locat
 
 ***
 
-#### API Paths 
+### API Paths 
 
 - **Root Endpoint:**
 
-    - Create (Post method) --> 
+    - **Create** (Post method) --> 
     **` http://127.0.0.1:3000/locations/ `** :
         In this method, you have to pass a JSON object like the following example:
         ```  
@@ -46,19 +46,24 @@ In this object you can see the form of a JSON document that populates the "Locat
             "age_average": 43.8,
 	    }
         ```
-    - Read (Get method) --> 
+    - **Read** (Get method) --> 
     **`http://127.0.0.1:3000/locations/`** :
         With this endpoint we can see all documents of Locations collection;
     
 - **Endpoint with an ID:**
 
-    - Update (Patch method) --> 
+    - **Update** (Patch method) --> 
     **`http://127.0.0.1:3000/locations/:id`** :
     Pass a JSON with the properties you want to upload, of the document with the respective id.
 
-    - Delete (delete method) -->
+    - **Delete** (Delete method) -->
     **`http://127.0.0.1:3000/locations/:id`** :
-    This path will delete from DataBase the document with respective id that you pass in the endpoint
+    This path will delete from DataBase the document with respective id that you pass in the Endpoint
+
+    - **Find one** (Get method) -->
+    **`http://127.0.0.1:3000/locations/:id`** :
+    This will return one document from the Locations collection that have that correspondent ID from the Endpoint
+
 
 
 
@@ -67,7 +72,7 @@ In this object you can see the form of a JSON document that populates the "Locat
 
 ***
 
-#### Connections and commands
+### Connections and commands
 
 To run the mongoDB server, you need to write the following code in your terminal:
 
