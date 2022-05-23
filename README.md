@@ -51,14 +51,13 @@ In this object you can see the form of a JSON document that populates the "Locat
         With this endpoint we can see all documents of Locations collection;
     
 - **Endpoint with an ID:**
+Need to replace the endpoint ":id" with the actual id from the document you're wanting to update
 
-(Need to replace the endpoint ":id" with the actual id from the document you're wanting to update )
-
-    - Update (Patch method) --> 
+ - Update (Patch method) --> 
     **`http://127.0.0.1:3000/locations/:id`** :
     Pass a JSON with the properties you want to upload, of the document with the respective id.
 
-    - Delete (delete method) -->
+ - Delete (delete method) -->
     **`http://127.0.0.1:3000/locations/:id`** :
     This path will delete from DataBase the document with respective id that you pass in the endpoint
 
