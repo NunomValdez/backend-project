@@ -23,7 +23,7 @@ exports.createLocation = async (req, res) => {
     res.status(201).json(location);
     } 
     catch (error){
-        // res.status(406).send('This location was not registered');
+        // res.status(409).send('This location was not registered');
         console.log(error);
     }
 };
@@ -61,7 +61,7 @@ exports.deleteLocation = async (req, res) => {
         console.log(locationId);
         const location = await Locations.findById(locationId);
         location.delete();
-        res.status(200).send( `Location ${location.name} was deleted from DataBase, and the Circus will not act there.` );
+        res.status(200).send( `Location ${location.city} was deleted from DataBase, and the Circus will not act there.` );
     }
     catch (err){
         console.table(err.message);
