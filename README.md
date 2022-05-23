@@ -10,6 +10,10 @@ In this project I've made a **Rest API** in Node.js, using Express as the applic
 <!-- In this REST API, information about a circus is managed, which employs several people, all of them with some particularities that make them unique and special.  -->
 
 
+### Author Contacts:
+1. :e-mail: : nunomvmf@gmail.com
+2. :moneybag: you can send me money if you want :relieved:
+
 
 mongod --config /usr/local/etc/mongod.conf
 
