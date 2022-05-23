@@ -10,7 +10,7 @@ Here you can create, read, update or delete data - CRUD. These functions give yo
 ---
 <!-- In this REST API, information about a circus is managed, which employs several people, all of them with some particularities that make them unique and special.  -->
 
-### Data document example
+#### Database Document example
 In this object you can see the form of a BSON document that populates the "Locations" Collection:
 
 ```
@@ -29,10 +29,19 @@ In this object you can see the form of a BSON document that populates the "Locat
 }
 ```
 
-#### Author Contacts:
+***
+
+#### Connections and commands
+
+To run the mongoDB server, you need to write the following code in your terminal:
+mongod --config /usr/local/etc/mongod.conf
+
+
+
+##### Author Contacts:
 1. :e-mail: : nunomvmf@gmail.com
+1. You can give me some feedback :thumbsup:
 2. :moneybag: you can send me money if you want :relieved: :smirk:
 
 
-mongod --config /usr/local/etc/mongod.conf
 
