@@ -1,7 +1,7 @@
 # Backend-project
 
 
-## Circus Database
+## Circus Database :clown:
 
 In this project I've made a **Rest API** in Node.js, using Express as the application framework, leveraging a NoSQL database - MongoDB - as means of storing the data.
     Here you can create, read, update or delete data - CRUD. These functions give you the possibility to manage the data in the DataBase, which has all the information about, in this case in particular, a Circus.
