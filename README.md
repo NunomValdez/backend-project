@@ -1,10 +1,10 @@
 # Backend-project
 
-## Circus Database
+## Circus Database :circus_tent:
 
 In this project you can find a **Rest API** made in Node.js, using Express as the application framework, leveraging a NoSQL database - MongoDB - as means of storing the data.
 
-Here you can **C**reate, **R**ead, **U**pdate or **D**elete data - CRUD. These functions give you the possibility to manage the data in the DataBase, which has all the information about, in this case in particular, a Circus :circus_tent:
+Here you can **C**reate, **R**ead, **U**pdate or **D**elete data - CRUD. These functions give you the possibility to manage the data in the DataBase, which has all the information about, in this case in particular, a Circus 
 
 ---
  
@@ -15,12 +15,14 @@ First, after you downloaded this project, in the proper folder, you can run the 
 now, in other terminal window, navigate to the folder where you have this project, run the command "npm run start" to start the Express Server. -->
 
 #### Step-by-step
-1. Download the project;
-1. **"`npm install`"** - instalation of dependencies;
-1. **`npm run start`** - Express Server;
-1. **`mongod --config /usr/local/etc/mongod.conf`** - MongoDB Server
 
- 
+1. Download the project;
+Then, you need to run this commands in your terminal, in the project folder
+1. **"`npm install`"** - instalation of dependencies;
+1. **`mongod --config /usr/local/etc/mongod.conf`** - MongoDB Server
+1. **`npm run start`** - express Server;
+
+---
  
 <!-- In this REST API, information about a circus is managed, which employs several people, all of them with some particularities that make them unique and special. -->
 
@@ -119,6 +121,8 @@ This will return one document from the Locations collection that have that corre
 	}
 }
 ```
+
+
 ***
 
 
@@ -134,29 +138,35 @@ This will return one document from the Locations collection that have that corre
 
 
 ---
-
+<!-- 
 ## UML diagrams
 
 You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
 
-```mermaid
+mermaid
 sequenceDiagram
 Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
+Bob-->
+<!-- >John: How about you John?
 Bob--x Alice: I am good thanks!
 Bob-x John: I am good thanks!
 Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
 
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
+Bob-->
+<!-- Alice: Checking with John...
+Alice->John: Yes... John, how are you? --> 
 
-And this will produce a flow chart:
 
-```mermaid
+<!-- And this will produce a flow chart:
+
+mermaid
 graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
+A[Square Rect] -- Link text --> 
+<!-- B((Circle)) -->
+<!-- A -
+-> C(Round Rect)
+B -
+-> D{Rhombus}
+C - -->
+<!-- -> D -->
+
