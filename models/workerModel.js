@@ -33,12 +33,6 @@ const Schema = mongoose.Schema({
   birthday : Number,
 });
 
-// NOTE: methods must be added to the schema before compiling it with mongoose.model()
-
-// Schema.methods.catchPhrase = function catchPhrase(){
-//   const phrase = `Hello simple Humans, i'm ${this.name} and i'm here to show you something!` 
-//   console.log(phrase);
-// };
  
 const Worker = mongoose.model("worker", Schema);
 

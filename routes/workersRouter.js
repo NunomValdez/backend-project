@@ -5,10 +5,8 @@ const { allWorkers,
      updateWorker,
     deleteWorker
      } = require("./../controllers/workersController.js");
-
 const router = express.Router();
  
-
 router
     .route("/")
     .get(allWorkers)
@@ -19,7 +17,5 @@ router
     .get(getWorker)
     .patch(updateWorker)
     .delete(deleteWorker);
-
-
 
     module.exports = router; 
