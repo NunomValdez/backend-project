@@ -7,15 +7,9 @@ mongoose.connect("mongodb://localhost:27017/circus_database").then(() =>{
   console.log('Error connecting to MongoDB: ', err.message);
 }));
  
-// =========== ObjectId ============
-// String.prototype.toObjectId = function() {
-//   let ObjectId = (require('mongoose').Types.ObjectId);
-//   return new ObjectId(this.toString());
-// };
-// Every String can be casted in ObjectId now
 
 const Schema = mongoose.Schema({
-  // _id: mongoose.Types.ObjectId,  
+
   name: {
     type:String,
     required: true
@@ -30,7 +24,7 @@ const Schema = mongoose.Schema({
     immutable: true,
     default: ()=> Date.now()
   },
-  birthday : Number,
+  birthday : Number
 });
 
  

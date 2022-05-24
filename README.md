@@ -7,7 +7,21 @@ In this project you can find a **Rest API** made in Node.js, using Express as th
 Here you can **C**reate, **R**ead, **U**pdate or **D**elete data - CRUD. These functions give you the possibility to manage the data in the DataBase, which has all the information about, in this case in particular, a Circus :circus_tent:
 
 ---
+ 
+### Getting started
+<!-- 
+First, after you downloaded this project, in the proper folder, you can run the command "npm install" to install all the dependencies found at package.json file. Then, to run the mongoDB server, you need to write the following code in your terminal:
+**`mongod --config /usr/local/etc/mongod.conf`**
+now, in other terminal window, navigate to the folder where you have this project, run the command "npm run start" to start the Express Server. -->
 
+#### Step-by-step
+1. Download the project;
+1. **"`npm install`"** - instalation of dependencies;
+1. **`npm run start`** - Express Server;
+1. **`mongod --config /usr/local/etc/mongod.conf`** - MongoDB Server
+
+ 
+ 
 <!-- In this REST API, information about a circus is managed, which employs several people, all of them with some particularities that make them unique and special. -->
 
 ### Database Document example
@@ -107,14 +121,7 @@ This will return one document from the Locations collection that have that corre
 ```
 ***
 
- 
-### Connections and commands
 
-  
-To run the mongoDB server, you need to write the following code in your terminal:
-
-**`mongod --config /usr/local/etc/mongod.conf`**
- 
 ##### Author Contacts:
 
 - :e-mail: : nunomvmf@gmail.com
