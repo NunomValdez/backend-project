@@ -50,7 +50,7 @@ Then, you need to run this commands in your terminal, in the project folder
 ### Database Document example
 
 
-In this object you can see the form of a JSON document that populates the "Locations" Collection:
+In this object you can see the form of a JSON document that populates the "Worker" Collection:
 
 ```
 {
@@ -114,7 +114,7 @@ Status: 201
 
 #### ``/inventory``
 
-In this path you will create a new document at the inventory DataBase
+In this path you will create a new document at the inventory Collection
 
 **Request example:**
 ```
@@ -162,7 +162,7 @@ With this endpoint we can see all documents of Locations collection.
 
 - **PATCH:**  **```/locations/{id}```**
 
-**id:** | String | required
+|**id:** | String | required|
 
 Pass a JSON with the properties you want to upload, of the document with the respective id.
 
@@ -189,6 +189,9 @@ Pass a JSON with the properties you want to upload, of the document with the res
 
 **Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" has the same behavior, they can modify some parts or all the document that has that especific ID.
 
+
+
+
 - **DELETE**  **```/locations/{id}```**
 
 This path will delete from DataBase the document with respective id that you pass in the Endpoint
@@ -202,6 +205,8 @@ Message: "Location {...} was deleted from DataBase, and the Circus will not act 
 **Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" has the same behavior, they delete the document that has that especific ID.
 
   
+
+
 
 - **GET:**  **`/locations/{id}`**
 
