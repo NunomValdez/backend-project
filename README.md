@@ -33,7 +33,7 @@ now, in other terminal window, navigate to the folder where you have this projec
 
   
 
-1. Download the project;
+- Download the project;
 
 Then, you need to run this commands in your terminal, in the project folder
 
@@ -156,6 +156,8 @@ With this endpoint we can see all documents of Locations collection.
 
 ```
 
+**Note:** Other routes, such as "/workers" and "/inventory" has the same behavior, they show all Documents that exists in certain Collection.
+
   
 
 - **PATCH:**  **```/locations/{id}```**
@@ -185,6 +187,8 @@ Pass a JSON with the properties you want to upload, of the document with the res
 
 ```
 
+**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" has the same behavior, they can modify some parts or all the document that has that especific ID.
+
 - **DELETE**  **```/locations/{id}```**
 
 This path will delete from DataBase the document with respective id that you pass in the Endpoint
@@ -194,6 +198,8 @@ This path will delete from DataBase the document with respective id that you pas
 Status: 200
 
 Message: "Location {...} was deleted from DataBase, and the Circus will not act there."
+
+**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" has the same behavior, they delete the document that has that especific ID.
 
   
 
@@ -220,7 +226,7 @@ This will return one document from the Locations collection that have that corre
 
 ```
 
-  
+**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" has the same behavior, they show the document that has that especific ID.
   
 
 ***
