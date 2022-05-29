@@ -6,7 +6,7 @@ mongoose.connect("mongodb://localhost:27017/circus_database").then(() =>{
   console.log('Error connecting to MongoDB: ', err.message);
 }));
 
-const Schema = mongoose.Schema({
+const Schema = new mongoose.Schema({
     // _id: mongoose.Types.ObjectId,  
     city: String, 
     country : String,

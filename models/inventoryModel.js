@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost:27017/circus_database")
 }));
  
  // === Schema 
-const Schema = mongoose.Schema({
+const Schema = new mongoose.Schema({
     name : {
         type : String,
         required : true

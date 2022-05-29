@@ -33,7 +33,7 @@ now, in other terminal window, navigate to the folder where you have this projec
 
   
 
-- Download the project;
+- Download the project- **`git clone`** "project URL" ;
 
 Then, you need to run this commands in your terminal, in the project folder
 
@@ -54,6 +54,7 @@ In this object you can see the form of a JSON document that populates the "Worke
 
 ```
 {
+	"_id": "627a9c2f4fc1091297fc0227",
 	"name": "wonder woman",
 	"particularity": "The one and only, the One with unusual Strength",
 	"shows": [
@@ -90,11 +91,33 @@ This method allows the creation of a new location Document in the Locations coll
 
 - **Response:**
 
-Status: 201
+Status: 201;
+{
+	"id": "534a9c2f4fc1091297fc6449",
+	"city": "Lisbon",
+	"country": "Portugal"
+	"population_density": 1234567890,
+	"age_average": 43.8,
+	"__v": 1
+}
 
 #### ``/workers``
 With this path, you'll create a new Circus worker, passing an JSON like the following :arrow_down: :
 ```
+{
+	"name": "Wonder Woman",
+	"particularity": "Unusual Strength for a Human",
+	"shows": [
+		"Elephant lifting ",
+		"juggling with people",
+		"wrestling with lions"
+		],
+	"date_of_submission": 1867,
+	"birthday": 1848
+}
+```
+- **Response:**
+Status: 201;
 {
 	"_id": "627a9c2f4fc1091297fc0227",
 	"name": "Wonder Woman",
@@ -108,9 +131,6 @@ With this path, you'll create a new Circus worker, passing an JSON like the foll
 	"birthday": 1848,
 	"__v": 1
 }
-```
-- **Response:**
-Status: 201
 
 #### ``/inventory``
 
@@ -119,6 +139,15 @@ In this path you will create a new document at the inventory Collection
 **Request example:**
 ```
 {
+	"name": "Tent",
+	"type": "Structural",
+	"date_of_purchase": "1853-01-01T00:00:00.000Z",
+	"price": 30
+}
+```
+**Response**
+Status: 201;
+{
 	"_id": "628d211e46dc8ee3486ae5b0",
 	"name": "Tent",
 	"type": "Structural",
@@ -126,7 +155,6 @@ In this path you will create a new document at the inventory Collection
 	"price": 30,
 	"__v": 0
 }
-```
 
   ---
   
