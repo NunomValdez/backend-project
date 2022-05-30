@@ -15,7 +15,7 @@ const port = process.env.DATABASE_PORT;
 app.use("/workers", workersRouter); 
 app.use("/locations", locationsRouter); 
 app.use("/inventory", inventoryRouter); 
-app.use("/resgister", userRouter);
+app.use("/register", userRouter);
 
 //podemos fazer uma rota "user.js" que vai ter a informação do utilizador, e fazer a hash da password que receber do user, no login.
 
