@@ -28,37 +28,13 @@ exports.userRegister = (req, res) => {
                 console.log(error);
             }else {
                 console.log("Saved in dataBase");
-                res.status(201);
+                res.status(200).send("Saved in database - check!");
                 //podemos fazer um res.render(página a renderizar), caso nao haja erros no save do user na DB
             }
         })
     });
 };
 
-exports.userLogin = (req, res) => {
-
-    const username = req.params.username;
-    const password = req.params.password;
-
-    User.findOne({email: username}, function(err, foundUser){
-        if ( err ){
-            console.log(err);
-        }else{
-            if(foundUser){
-                bcrypt.compare(password, foundUser.password, function(err, result) {
-                    // result == true
-                   if(result){
-                       console.log("Login successfull");
-                       res.status(200);
-                   }
-                });
-                    
-            }
-        }
-    })
-
-    
-};
 
 // exports.identifyUser = async (req, res) => {
 //  const userIdentify = await User.findOne({email === req.params.username});
