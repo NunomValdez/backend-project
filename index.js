@@ -7,12 +7,15 @@ const inventoryRouter = require("./routes/inventoryRouter");
 const userRouter = require("./routes/userRouter");
 const loginRouter = require("./routes/loginRouter");
 
+
 const app = express(); 
 app.use(express.json()); // convém colocar isto no código para ter a certeza
 // que a informação é convertida em JSON, i.e., para se poder usar json na app
 
 const port = process.env.DATABASE_PORT;
 // ==========
+
+
 
 //Ver se é possivel, com o registo do user, aceder ao app.use APENAS se estiver regitado e com login feito! 
 //será q o login tem de ser feito dentro de 1 funcao, q retorna login = true ou login =false, e consoante isso, importamos essa variavel para aqui, e tem acesso ao app.use?
