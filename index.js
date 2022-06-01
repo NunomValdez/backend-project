@@ -14,6 +14,9 @@ app.use(express.json()); // convém colocar isto no código para ter a certeza
 const port = process.env.DATABASE_PORT;
 // ==========
 
+//Ver se é possivel, com o registo do user, aceder ao app.use APENAS se estiver regitado e com login feito! 
+//será q o login tem de ser feito dentro de 1 funcao, q retorna login = true ou login =false, e consoante isso, importamos essa variavel para aqui, e tem acesso ao app.use?
+
 app.use("/workers", workersRouter); 
 app.use("/locations", locationsRouter); 
 app.use("/inventory", inventoryRouter); 

@@ -17,12 +17,10 @@ mongoose.connect("mongodb://localhost:27017/circus_database")
 
 
 exports.userRegister = (req, res) => {
-  // console.log(req);
-  // console.table(bcrypt);
      bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
-        // Store hash in your password DB. 
+        // Store hashed password in DB:
         const newUser = new User({
-        email: req.body.username,
+        username: req.body.username,
         password: hash
         });
          newUser.save(function(error){
@@ -30,7 +28,7 @@ exports.userRegister = (req, res) => {
                 console.log(error);
             }else {
                 console.log("Saved in dataBase");
-                res.status(200).send("Saved in database - check!");
+                res.status(201).send("Saved in database - check!");
                 //podemos fazer um res.render(página a renderizar), caso nao haja erros no save do user na DB
             }
         })
