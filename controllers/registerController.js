@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const User = require("./../models/userModel");
+const User = require("../models/userModel");
 const bcrypt = require("bcrypt");
 
 //nr de rondas q as passwords vão ser "hasheadas" (variavel global neste ficheiro)
@@ -17,6 +17,8 @@ mongoose.connect("mongodb://localhost:27017/circus_database")
 
 
 exports.userRegister = (req, res) => {
+  // console.log(req);
+  // console.table(bcrypt);
      bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
         // Store hash in your password DB. 
         const newUser = new User({

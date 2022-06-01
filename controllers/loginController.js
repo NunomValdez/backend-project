@@ -25,6 +25,9 @@ exports.userLogin = async (req, res) => {
                    if(result){
                         console.log("Login successfull");
                         res.status(200).send("login ok");
+                   }else{
+                    //    console.log(err);  Este err, da funcao callback, é undefined, pq motivo? n faz sentido, pq devia ser o erro q daria caso a comparacao das passes n fosse correcta
+                       res.status(401).send("You don't have acess to this information, sorry");
                    }
                 });
                     

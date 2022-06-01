@@ -22,6 +22,7 @@ app.use("/register", userRouter);
 
 app.use("/login", loginRouter);
 
+// ======= NOTE: either login and register Controllers uses the userModel, because the register and login has to refer the same user, and for that, i find more useful to have only one model for that type of data
 
 
 app.listen(port, ()=>{
