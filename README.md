@@ -264,6 +264,40 @@ This will return one document from the Locations collection that have that corre
 
 ***
 
+### User Register and Login
+
+#### API Paths
+
+- Has usual nowadays, to improve the security of DataBases and Sites, users have to register and make a login everywhere. Having this in mind, i added two Endpoints to my project, to simulate this common practice.
+
+##### Register
+
+In order to register an User, we have to send a JSON object to the following Route:
+
+-**POST:** **"`/register`"** 
+Example JSON:
+```
+{
+	"username": "user",
+	"password": "qwerty7654"
+}
+```
+In order to Register some user, we have to follow the following Schema:
+
+```
+const userSchema = new mongoose.Schema({
+    email: String,
+    password: {
+        type: String, 
+        required: true, 
+        min: 6
+    }
+})
+```
+This forces the user to have a password with at least 6 characters, to increase security
+It's important to notice that, in the respective controller, this password will be encrypted, and to add more layers of security, we add to that specific string, more random characters, with the "salt" technique. This is possible because of the **bcrypt** library. 
+
+
   
   
 
