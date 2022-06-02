@@ -14,24 +14,34 @@ mongoose.connect("mongodb://localhost:27017/circus_database")
 
 
 exports.userLogin = async (req, res) => {
+    try{
+        const { username, password } = req.body; //user and password from client's request
 
-    User.findOne({"username": req.body.username}, function(err, foundUser){
-        if ( err ){
-            console.log(err);
-        }else{
-            if(foundUser){
-                bcrypt.compare(req.body.password, foundUser.password, function(err, result) {
-                    // result == true
-                   if(result){
-                        console.table(`${req.body.username}, you've logged in`);
-                        res.status(200).send("login ok");
-                   }else{
-                    //    console.log(err);  Este err, da funcao callback, é undefined, pq motivo? n faz sentido, pq devia ser o erro q daria caso a comparacao das passes n fosse correcta
-                       res.status(401).send("You don't have acess to this information, sorry");
-                   }
-                });
-                    
+        await User.findOne({"username": username}, function(err, foundUser){
+            if ( err ){
+                console.log(err.message);
             }
-        }
-    });
+            else{
+                if(foundUser){ //caso encontremos um user com aquele username, comparar as passes e se forem =, login feito! falta ver o token p mandar no header em cada request
+                    bcrypt.compare(password, foundUser.password, function(err, result) {
+                        // result == true
+                    if(result){
+                            console.table(`${username}, you've logged in`);
+                            res.status(200).send("login ok");
+                            //gerar um token login, e enviar neste .send, para enviar po cliente
+                    }else{
+                        //    console.log(err);  Este err, da funcao callback, é undefined, pq motivo? n faz sentido, pq devia ser o erro q daria caso a comparacao das passes n fosse correcta
+                        res.status(401).send("You don't have acess to this information, sorry");
+                    }
+                    });
+                        
+                }
+            }
+        });
+    } 
+    catch (err){
+        console.log(err.message);
+    }
+
+
 };
