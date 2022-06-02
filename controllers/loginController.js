@@ -13,7 +13,6 @@ mongoose.connect("mongodb://localhost:27017/circus_database")
 }));
 
 
-
 exports.userLogin = async (req, res) => {
     try{
         const { username, password } = req.body; //user and password from client's request
@@ -28,12 +27,13 @@ exports.userLogin = async (req, res) => {
                         // result == true
                     if(result){
                         // GERAR TOKEN AQUI
-                        const token = sign({ 
-                            username,
-                            password }, 
-                            process.env.JWT_SALT, 
-                            { expiresIn:120 },
-                            );
+                        const token = sign(
+                            { 
+                                username,
+                                password
+                            }, 
+                            process.env.JWT_SALT
+                        );
                         // console.log(token);
 
                         console.log(`${username}, you've logged in`);
