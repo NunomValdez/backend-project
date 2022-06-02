@@ -6,17 +6,18 @@ const {
     deleteInventory,
     getInventory,
      } = require("../controllers/inventoryController.js");
+const auth = require("../middleware/auth.js");
 const router = express.Router();
 
 
 router
     .route("/")
-    .get(allInventories)
-    .post(createInventory); 
+    .get( auth, allInventories )
+    .post( auth, createInventory ); 
 router
     .route("/:_id")
-    .get(getInventory)
-    .patch(updateInventory)
-    .delete(deleteInventory);
+    .get( auth, getInventory )
+    .patch( auth, updateInventory )
+    .delete( auth, deleteInventory );
 
 module.exports = router; 

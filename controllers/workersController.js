@@ -1,5 +1,8 @@
 const Worker = require("./../models/workerModel.js");
 const mongoose = require("mongoose");
+const auth = require("./../middleware/auth");
+
+// console.log(auth);
 
 exports.allWorkers = async (req, res) => {
     // console.log(req.params);
@@ -33,7 +36,7 @@ exports.getWorker = async (req,res) => {
     const worker = await Worker.findById(workerId);
     res.send({data: worker});
 };
-
+ 
 exports.updateWorker = async (req, res) => {
     try{
         const workerId = req.params._id;

@@ -57,11 +57,7 @@ exports.userRegister = async (req, res) => {
                 })
             });
         }
-        // if(password !== passwordCheck){
-        //   return res
-        //   .status(400)
-        //   .json({msg: "Password's wrong. Please try again."});
-        // }
+     
 
   }  catch (err) {
     console.log(err.message);
