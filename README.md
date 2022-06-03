@@ -36,7 +36,9 @@ Then, you need to run these commands in your terminal, in the project folder
 #### Register and Login first
 
 **NOTE:**
-In order to manage some data in the DataBase, we have to register first, and make a login. This login route generates a token, and we have to use it in **every** route (more information at the bottom of this page).
+In order to use the API, first we need to register an account
+After you have created the account, you have to authenticate in order to obtain a valid token.
+That token will need to be provided in **every** route of the API (more information at the bottom of this page).
 
 ---
 
@@ -248,8 +250,6 @@ This will return **one** document from the Locations collection that has that co
 
 ### User Register and log in
 
-#### API Paths
-
 - Nowadays, to improve the security of DataBases and Sites, users have to register and make a login everywhere. Having this in mind, I added two Endpoints to my project, to simulate this common practice.
 
 ##### Register
@@ -286,26 +286,24 @@ To Register a user, we have to follow the following Schema:
 
 This forces the user to have a password with at least six characters, to increase security and to have a non-existing username.
 
-It's important to notice that, in the respective controller, this password will be encrypted, and to add more layers of security, we add to that specific string more random characters, with the "salt" technique. This is only possible because of the **bcrypt** library.
+git It's important to notice that, in the respective controller, this password will be encrypted, and to add more layers of security, we add to that specific string more random characters, with the "salt" technique. This is only possible thanks to the **bcrypt** library.
 
 **Response**
 
-Status: 201 - Created;
+Status: 201 - Created ;
 
 " Saved in database - check! "
 
 #### Login
 
-After registering a user, the login controller generates a Token, that we have to use in other paths for them to work
+After logging in a user, the login controller generates a Token, that we have to provide in other endpoints for them to work
 
-For this, we have to go to "Headers", and add some fields:
+For this, we have to provide the following Headers:
 
 | New header       | New value               |
 | ---------------- | ----------------------- |
 | Content-type     | application/json        |
 | **x-auth-token** | **{ generated token }** |
-
-**Note:** To work with every route, every user has to be registered and pass this header to the specific route.
 
 ##### Author Contacts:
 
