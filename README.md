@@ -33,10 +33,12 @@ Then, you need to run these commands in your terminal, in the project folder
 
 ---
 
-##### Register and Login first
+#### Register and Login first
 
 **NOTE:**
 In order to manage some data in the DataBase, we have to register first, and make a login. This login route generates a token, and we have to use it in **every** route (more information at the bottom of this page).
+
+---
 
 ### Database Document example
 
