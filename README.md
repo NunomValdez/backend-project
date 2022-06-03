@@ -33,6 +33,11 @@ Then, you need to run these commands in your terminal, in the project folder
 
 ---
 
+##### Register and Login first
+
+**NOTE:**
+In order to manage some data in the DataBase, we have to register first, and make a login. This login route generates a token, and we have to use it in **every** route (more information at the bottom of this page).
+
 ### Database Document example
 
 In this object you can see the form of a JSON document that populates the "Worker" Collection:
@@ -74,18 +79,19 @@ This method allows the creation of a new location Document in the Locations coll
 }
 ```
 
-- **Response:**
-  Status: 201;
-  ```
-  {
-  "id": "534a9c2f4fc1091297fc6449",
-  "city": "Lisbon",
-  "country": "Portugal"
-  "population_density": 1234567890,
-  "age_average": 43.8,
-  "\_\_v": 1
-  }
-  ```
+**Response:**
+Status: 201;
+
+```
+{
+	"id": "534a9c2f4fc1091297fc6449",
+	"city": "Lisbon",
+	"country": "Portugal"
+	"population_density": 1234567890,
+	"age_average": 43.8,
+	"\_\_v": 1
+}
+```
 
 #### `/workers`
 
@@ -103,26 +109,27 @@ With this path, you'll create a new Circus worker, passing a JSON like the follo
 	"date_of_submission": 1867,
 	"birthday": 1848
 }
-
 ```
 
-- **Response:**
+**Response:**
 
 Status: 201;
 
+```
 {
-"\_id": "627a9c2f4fc1091297fc0227",
-"name": "Wonder Woman",
-"particularity": "Unusual Strength for a Human",
-"shows": [
-"Elephant lifting ",
-"juggling with people",
-"wrestling with lions"
-],
-"date_of_submission": 1867,
-"birthday": 1848,
+	"\_id": "627a9c2f4fc1091297fc0227",
+	"name": "Wonder Woman",
+	"particularity": "Unusual Strength for a Human",
+	"shows": [
+		"Elephant lifting ",
+		"juggling with people",
+		"wrestling with lions"
+		],
+	"date_of_submission": 1867,
+	"birthday": 1848,
 "\_\_v": 1
 }
+```
 
 #### `/inventory`
 
@@ -137,7 +144,6 @@ In this path, you will create a new document at the inventory Collection
 	"date_of_purchase": "1853-01-01T00:00:00.000Z",
 	"price": 30
 }
-
 ```
 
 **Response**
@@ -176,7 +182,7 @@ With this endpoint, we can see all documents of the Locations collection.
 }
 ```
 
-**Note:** Other routes, such as "/workers" and "/inventory" has the same behavior, they show all Documents that exist in a certain Collection.
+**Note:** Other routes, such as "/workers" and "/inventory" have the same behavior, they show all Documents that exist in a certain Collection.
 
 - **PATCH:** **`/locations/{id}`**
 
@@ -186,7 +192,7 @@ Pass a JSON with the properties you want to upload, to the document with the res
 
 ```
 {
-"city": "Faro"
+	"city": "Faro"
 }
 ```
 
@@ -201,24 +207,24 @@ Pass a JSON with the properties you want to upload, to the document with the res
 }
 ```
 
-**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" have the same behavior, they can modify some parts or all the document that has that specific ID.
+**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" have the same behavior, they can modify some parts or all the document that has that specific **id**.
 
 - **DELETE** **`/locations/{id}`**
 
-This path will delete from DataBase the document with a respective id that you pass in the Endpoint
+This path will delete from DataBase the document with a respective **id** that you pass in the Endpoint
 
 **Response:**
 
-Status: 200
+Status: 200;
 
 Message: "Location {...} was deleted from DataBase, and the Circus will not act there."
 
-**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" have the same behavior, they delete the document that has that specific ID.
+**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" have the same behavior, they delete the document that has that specific **id**.
 
 - **GET:** **`/locations/{id}`**
   **id:** | String | required
 
-This will return one document from the Locations collection that has that correspondent ID from the Endpoint, like in the following example:
+This will return **one** document from the Locations collection that has that correspondent **id** from the Endpoint, like in the following example:
 :arrow_down:
 
 ```
@@ -234,7 +240,7 @@ This will return one document from the Locations collection that has that corres
 }
 ```
 
-**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" have the same behavior, they show the document that has that specific ID.
+**Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" have the same behavior, they show the document that has that specific **id**.
 
 ---
 
@@ -246,7 +252,7 @@ This will return one document from the Locations collection that has that corres
 
 ##### Register
 
-To register a User, we have to send a JSON object to the following Route:
+To register a user, we have to send a JSON object to the following Route:
 
 -**POST:** **"`/register`"**
 Example JSON:
@@ -259,7 +265,7 @@ Example JSON:
 
 ```
 
-To Register some users, we have to follow the following Schema:
+To Register a user, we have to follow the following Schema:
 
 ```
 {
@@ -274,7 +280,6 @@ To Register some users, we have to follow the following Schema:
 		minlength: 6
 	}
 }
-
 ```
 
 This forces the user to have a password with at least six characters, to increase security and to have a non-existing username.
@@ -289,16 +294,16 @@ Status: 201 - Created;
 
 #### Login
 
-After registering a user, the login controller generates a Token, that we can use to work with all other Paths.
+After registering a user, the login controller generates a Token, that we have to use in other paths for them to work
 
 For this, we have to go to "Headers", and add some fields:
 
-**Note:** To work with every route, every user has to be registered and pass this header to the specific route:
+| New header       | New value               |
+| ---------------- | ----------------------- |
+| Content-type     | application/json        |
+| **x-auth-token** | **{ generated token }** |
 
-| New header   | New value           |
-| ------------ | ------------------- |
-| Content-type | application/json    |
-| x-auth-token | { generated token } |
+**Note:** To work with every route, every user has to be registered and pass this header to the specific route.
 
 ##### Author Contacts:
 

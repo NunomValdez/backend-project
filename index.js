@@ -13,6 +13,8 @@ const port = process.env.DATABASE_PORT || 3000;
 const app = express(); 
 app.use(express.json()); // convém colocar isto no código para ter a certeza
 // que a informação é convertida em JSON, i.e., para se poder usar json na app
+// Este middleware "informa" o node-express que vamos usar json, e se n pusermos isto, 
+//ha informacoes q sao passadas como json q a app nao reconhecerá
 
 
 
