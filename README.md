@@ -51,7 +51,6 @@ In this object you can see the form of a JSON document that populates the "Worke
 	"birthday": 1848,
 	"__v": 1
 }
-
 ```
 
 ---
@@ -67,18 +66,17 @@ This method allows the creation of a new location Document in the Locations coll
 **Request example:**
 
 ```
-
+{
 	"city": "Lisbon",
 	"country": "Portugal"
 	"population_density": 1234567890,
 	"age_average": 43.8,
 }
-
-
 ```
 
 - **Response:**
   Status: 201;
+  ```
   {
   "id": "534a9c2f4fc1091297fc6449",
   "city": "Lisbon",
@@ -87,6 +85,7 @@ This method allows the creation of a new location Document in the Locations coll
   "age_average": 43.8,
   "\_\_v": 1
   }
+  ```
 
 #### `/workers`
 
@@ -144,14 +143,17 @@ In this path, you will create a new document at the inventory Collection
 **Response**
 
 Status: 201;
+
+```
 {
-"\_id": "628d211e46dc8ee3486ae5b0",
-"name": "Tent",
-"type": "Structural",
-"date_of_purchase": "1853-01-01T00:00:00.000Z",
-"price": 30,
-"\_\_v": 0
+	"\_id": "628d211e46dc8ee3486ae5b0",
+	"name": "Tent",
+	"type": "Structural",
+	"date_of_purchase": "1853-01-01T00:00:00.000Z",
+	"price": 30,
+	"\_\_v": 0
 }
+```
 
 ---
 
@@ -162,7 +164,6 @@ With this endpoint, we can see all documents of the Locations collection.
 **Response:**
 
 ```
-
 {
 	...
 	{
@@ -173,9 +174,6 @@ With this endpoint, we can see all documents of the Locations collection.
 	}
 	...
 }
-
-
-
 ```
 
 **Note:** Other routes, such as "/workers" and "/inventory" has the same behavior, they show all Documents that exist in a certain Collection.
@@ -224,7 +222,6 @@ This will return one document from the Locations collection that has that corres
 :arrow_down:
 
 ```
-
 {
 	"data": {
 		"_id": "628416006659f4083e5487a8",
@@ -235,9 +232,6 @@ This will return one document from the Locations collection that has that corres
 		"__v": 0
 	}
 }
-
-
-
 ```
 
 **Note:** Other routes, such as "/workers/{id}" and "/inventory/{id}" have the same behavior, they show the document that has that specific ID.
@@ -299,7 +293,7 @@ After registering a user, the login controller generates a Token, that we can us
 
 For this, we have to go to "Headers", and add some fields:
 
-**Note:** To work with every route, every user has to be registered and pass this header to the specific route!
+**Note:** To work with every route, every user has to be registered and pass this header to the specific route:
 
 | New header   | New value           |
 | ------------ | ------------------- |
