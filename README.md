@@ -43,10 +43,10 @@ In this object you can see the form of a JSON document that populates the "Worke
 	"name": "wonder woman",
 	"particularity": "The one and only, the One with unusual Strength",
 	"shows": [
-	"Men lifting",
-	"juggling with cars",
-	"wrestling with lions"
-	],
+		"Men lifting",
+		"juggling with cars",
+		"wrestling with lions"
+		],
 	"date_of_submission": 1867,
 	"birthday": 1848,
 	"__v": 1
@@ -96,9 +96,9 @@ With this path, you'll create a new Circus worker, passing a JSON like the follo
 	"name": "Wonder Woman",
 	"particularity": "Unusual Strength for a Human",
 	"shows": [
-	"Elephant lifting ",
-	"juggling with people",
-	"wrestling with lions"
+		"Elephant lifting ",
+		"juggling with people",
+		"wrestling with lions"
 	],
 	"date_of_submission": 1867,
 	"birthday": 1848
