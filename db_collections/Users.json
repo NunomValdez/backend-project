@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "62952c6cb95a2eb44e1b1816"
+  },
+  "email": "juracema",
+  "password": "$2b$10$uByRScLEEvlbFRdwDa0ZzO07IG8ni4fA1e3il.135N.AlhrNgUpC.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62975ec3c4ac4ff6464e9bc9"
+  },
+  "username": "Joaquim Perneta",
+  "password": "$2b$10$/dH7OPRwBNJBGv6XJ22eyOEzXYcxIKmQtvok0P/NtoYZJGppWFR.O",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6297601c6d506413c9c9ae85"
+  },
+  "username": "Serafim Saudade",
+  "password": "$2b$10$xNUm5CWdJjoH1GvgkisFoOJzaWaCdZ7JmOpxpL/Ob6lZdBuRtxSWm",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6298988e6e9e287e126e81b8"
+  },
+  "username": "nunoValdez",
+  "password": "$2b$10$GmZoYbZhfvM1zpdsWVJV0..5FjnZqP6T1rT8IP.fF6YrL2rzQiobK",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6298f0ea23b5d3a6b76ce515"
+  },
+  "username": "nunoValdezFernandes",
+  "password": "$2b$10$DmWou.0RGYJt3dVOzT8I0es7lYCN1fEkp/z0asOL.hSqRwoCI0LiG",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6299cdf071ea2079bb7a32d6"
+  },
+  "username": "Lolita Felizarda",
+  "password": "$2b$10$RhtD4JqqcdrhxW.CvmhrsegnCLw8NqPl9n/B6O8Nlm09i4OX8xyZe",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6299cec3a8f52f791a19476b"
+  },
+  "username": "NinaSimone",
+  "password": "$2b$10$a0sHOKMMA3rPRo.ggXOfGuksQKc5Lu7hoqlAgCTq7l8N2/XUs1fJu",
+  "__v": 0
+}]

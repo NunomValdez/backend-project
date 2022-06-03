@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "628d211e46dc8ee3486ae5b0"
+  },
+  "name": "Tent",
+  "type": "Structural",
+  "date_of_purchase": {
+    "$date": {
+      "$numberLong": "-3692131200000"
+    }
+  },
+  "price": 30,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628d218546947ab0d3253fdb"
+  },
+  "name": "Huge Tent",
+  "type": "Structural",
+  "date_of_purchase": {
+    "$date": {
+      "$numberLong": "-3692131200000"
+    }
+  },
+  "price": 30,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6299d61f9154df91882e2ade"
+  },
+  "name": "Ring of fire",
+  "type": "Show",
+  "date_of_purchase": {
+    "$date": {
+      "$numberLong": "-3692131200000"
+    }
+  },
+  "price": 15,
+  "__v": 0
+}]

@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { stringify } = require("nodemon/lib/utils");
  
 mongoose.connect("mongodb://localhost:27017/circus_database").then(() =>{
   console.log('Conected to MongoDB');
@@ -7,9 +8,11 @@ mongoose.connect("mongodb://localhost:27017/circus_database").then(() =>{
 }));
 
 const Schema = new mongoose.Schema({
-    // _id: mongoose.Types.ObjectId,  
-    city: String, 
-    country : String,
+    city:{
+      type: String,
+      unique: true
+    }, 
+    country : {type: String, unique: true},
     population_density: Number,
     age_average: Number
   });

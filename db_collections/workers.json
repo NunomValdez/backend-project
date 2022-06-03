@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "62796919a121c72b010fdb84"
+  },
+  "name": "Werewolf",
+  "particularity": "lycanthropy",
+  "shows": [
+    "Three little pigs",
+    "Werewolf, the weird Devil's son",
+    "Red Riding Hood"
+  ],
+  "date_pf_submission": 1850,
+  "birthday": 1800
+},{
+  "_id": {
+    "$oid": "627a9c2f4fc1091297fc0227"
+  },
+  "name": "wonder woman",
+  "particularity": "The one and only, the One with unusual Strength",
+  "shows": [
+    "dwarf lifting ",
+    "juggling with cars",
+    "wrestling with lions"
+  ],
+  "date_of_submission": 1867,
+  "birthday": 1848,
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "627c02e3d40b90e504088689"
+  },
+  "name": "The Bearded Woman",
+  "particularity": "The lovely Woman who represents all the natural beauty the world can contain",
+  "shows": [
+    " The Lovely literary reading  ",
+    " Opera Singing moment "
+  ],
+  "date_of_submission": 1867,
+  "birthday": 1840,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62829453a85c84c6719a6a11"
+  },
+  "name": "Super Dwarf",
+  "particularity": "This big gentleman has so much strength, he can lift a car with one arm, and your wife with the other, at the same time!",
+  "shows": [
+    " Snow white and the seven dwarfs ",
+    " One of the \"Dwarf lifting\" show "
+  ],
+  "date_of_admission": 1867,
+  "birthday": 1850,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6283dab0dbb0a0421c8e3e3a"
+  },
+  "name": "Little Mermaid",
+  "particularity": "The one and only, the One with unusual Strength",
+  "shows": [
+    "Lullaby Singing Contest",
+    "",
+    "wrestling with lions"
+  ],
+  "date_of_admission": {
+    "$date": {
+      "$numberLong": "1652808368719"
+    }
+  },
+  "birthday": 1848,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62840d31c4d903986fe72063"
+  },
+  "name": "Little Mermaid2- daughter",
+  "particularity": "The one and only, the One with unusual Strength",
+  "shows": [
+    "Lullaby Singing Contest- backing ground",
+    "",
+    "wrestling with lions"
+  ],
+  "date_of_admission": {
+    "$date": {
+      "$numberLong": "1652821297161"
+    }
+  },
+  "birthday": 1848,
+  "__v": 0
+}]

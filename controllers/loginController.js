@@ -42,7 +42,7 @@ exports.userLogin = async (req, res) => {
                         .json({
                             token: token,
                             user: username
-                        });
+                        }); //this is what's gonna show on insomnia
         // console.log(res);
             //gerar um token login, e enviar neste .send, para enviar po cliente
                     }else{

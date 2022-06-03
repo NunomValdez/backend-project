@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "6283e1f74b5c41247f94ab8d"
+  },
+  "city": "marinha grande",
+  "country": "portugalinho",
+  "population_density": {
+    "$numberLong": "5634567890"
+  },
+  "age_average": 35.8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "628e706a34c59aa10b951bd8"
+  },
+  "city": "marinha graaade",
+  "country": "carcavelooos",
+  "population_density": {
+    "$numberLong": "5634567890"
+  },
+  "age_average": 35.8,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6299d83d9154df91882e2ae1"
+  },
+  "city": "Paris",
+  "country": "France",
+  "population_density": {
+    "$numberLong": "5634567834590"
+  },
+  "age_average": 30.8,
+  "__v": 0
+}]

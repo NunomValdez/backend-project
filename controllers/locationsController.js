@@ -14,6 +14,7 @@ exports.allLocations = async (req, res) => {
 
 exports.createLocation = async (req, res) => {
     try{
+        console.log(req.body);
         const location = await Locations.create({
         city: req.body.city,
         country : req.body.country,
@@ -24,7 +25,7 @@ exports.createLocation = async (req, res) => {
     } 
     catch (error){
         // res.status(409).send('This location was not registered');
-        console.log(error);
+        console.log(error.message);
     }
 };
 
