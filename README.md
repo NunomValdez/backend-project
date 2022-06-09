@@ -21,7 +21,11 @@ now, in another terminal window, navigate to the folder where you have this proj
 
 #### Step-by-step
 
-- Download the project- **`git clone`** "project URL" ;
+- First of all, you need to have MongoDB and Node (v16.13.0) installed in your machine;
+
+- Clone the project to your machine;
+
+- You need to create a ".env" file, based on the provided ".env.example", filling the required variables with values you prefer.
 
 Then, you need to run these commands in your terminal, in the project folder
 
